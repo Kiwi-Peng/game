@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的專屬拼圖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <h1>拼圖挑戰 (2x2)</h1>
+        <p>點擊一片，再點擊另一片來交換位置。</p>
+        
+        <div id="puzzle-container">
+            </div>
+
+        <div id="success-message" class="hidden">
+            <h2>🎉 恭喜通關！ 🎉</h2>
+            <button onclick="location.reload()">再玩一次</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
