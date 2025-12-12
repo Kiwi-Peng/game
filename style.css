@@ -39,7 +39,6 @@ body {
     height: var(--piece-size);
     cursor: pointer;
     /* --- 關鍵：在這裡換成你的照片檔名 --- */
-    
     background-image: url('puzzle.jpg');  
     background-size: var(--puzzle-size) var(--puzzle-size); /* 確保背景圖是完整大小 */
     transition: transform 0.2s, box-shadow 0.2s;
@@ -89,4 +88,5 @@ body {
     border-radius: 5px;
 
 }
+
 
