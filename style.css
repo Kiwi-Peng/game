@@ -1,7 +1,7 @@
 :root {
     /* 定義拼圖總大小，這裡設為 600px，所以每片是 300px */
     --puzzle-size: 600px;
-    --piece-size: calc(var(--puzzle-size) / 2);
+    --piece-size: calc(var(--puzzle-size) / 3);
 }
 
 body {
@@ -26,7 +26,7 @@ body {
     width: var(--puzzle-size);
     height: var(--puzzle-size);
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 建立 2x2 的網格 */
+    grid-template-columns: repeat(3, 1fr); /* 建立 2x2 的網格 */
     gap: 2px; /* 拼圖之間的細縫，看起來更像拼圖 */
     border: 5px solid #333;
     background-color: #333;
@@ -57,15 +57,20 @@ body {
     border: 2px solid yellow;
 }
 
-/* 切圖魔法：定義四個角落的位置 */
-/* id="piece-0" 是正確答案在左上角的碎片 */
+/* 第一排 */
 [data-correct-pos="0"] { background-position: 0% 0%; }
-/* id="piece-1" 是正確答案在右上角的碎片 */
-[data-correct-pos="1"] { background-position: 100% 0%; }
-/* id="piece-2" 是正確答案在左下角的碎片 */
-[data-correct-pos="2"] { background-position: 0% 100%; }
-/* id="piece-3" 是正確答案在右下角的碎片 */
-[data-correct-pos="3"] { background-position: 100% 100%; }
+[data-correct-pos="1"] { background-position: 50% 0%; }
+[data-correct-pos="2"] { background-position: 100% 0%; }
+
+/* 第二排 */
+[data-correct-pos="3"] { background-position: 0% 50%; }
+[data-correct-pos="4"] { background-position: 50% 50%; }
+[data-correct-pos="5"] { background-position: 100% 50%; }
+
+/* 第三排 */
+[data-correct-pos="6"] { background-position: 0% 100%; }
+[data-correct-pos="7"] { background-position: 50% 100%; }
+[data-correct-pos="8"] { background-position: 100% 100%; }
 
 
 /* 通關訊息樣式 */
@@ -88,5 +93,6 @@ body {
     border-radius: 5px;
 
 }
+
 
 
