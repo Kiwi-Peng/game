@@ -2,7 +2,7 @@ const container = document.getElementById('puzzle-container');
 const successMessage = document.getElementById('success-message');
 
 // 正確的順序陣列 (0代表左上, 1代表右上, 2代表左下, 3代表右下)
-const correctOrder = [0, 1, 2, 3];
+const correctOrder = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 // 目前的遊戲狀態，一開始先複製一份正確順序
 let currentPieces = [...correctOrder];
@@ -107,4 +107,5 @@ function shuffleArray(array) {
 }
 
 // 啟動遊戲
+
 initGame();
