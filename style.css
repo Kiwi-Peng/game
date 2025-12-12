@@ -1,6 +1,7 @@
 :root {
-    /* 定義拼圖總大小，這裡設為 600px，所以每片是 300px */
+    /* 定義拼圖總大小，這裡設為 600px，所以每片是 200px */
     --puzzle-size: 600px;
+    /* 3x3 拼圖，每片大小是總長除以 3 */
     --piece-size: calc(var(--puzzle-size) / 3);
 }
 
@@ -26,8 +27,9 @@ body {
     width: var(--puzzle-size);
     height: var(--puzzle-size);
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 建立 2x2 的網格 */
-    gap: 2px; /* 拼圖之間的細縫，看起來更像拼圖 */
+    /* 建立 3x3 的網格 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2px; /* 拼圖之間的細縫 */
     border: 5px solid #333;
     background-color: #333;
     margin: 20px auto;
@@ -38,7 +40,7 @@ body {
     width: var(--piece-size);
     height: var(--piece-size);
     cursor: pointer;
-    /* --- 關鍵：在這裡換成你的照片檔名 --- */
+    /* 你的照片檔名 */
     background-image: url('puzzle.jpg');  
     background-size: var(--puzzle-size) var(--puzzle-size); /* 確保背景圖是完整大小 */
     transition: transform 0.2s, box-shadow 0.2s;
@@ -56,6 +58,8 @@ body {
     z-index: 10;
     border: 2px solid yellow;
 }
+
+/* --- 切圖設定：3x3 版本 (0%, 50%, 100%) --- */
 
 /* 第一排 */
 [data-correct-pos="0"] { background-position: 0% 0%; }
@@ -87,12 +91,4 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-
-}
-
-
-
+    background-color: #28a
