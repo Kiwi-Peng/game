@@ -1,6 +1,6 @@
 :root {
     /* 定義拼圖總大小，這裡設為 600px，所以每片是 200px */
-    --puzzle-size: 600px;
+450px;
     /* 3x3 拼圖，每片大小是總長除以 3 */
     --piece-size: calc(var(--puzzle-size) / 3);
 }
@@ -92,3 +92,4 @@ body {
     font-size: 16px;
     cursor: pointer;
     background-color: #28a
+
